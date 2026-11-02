@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aurora Clínica · Lisboa</title>
+<meta name="description" content="Medicina estética, estética avançada e medicina dentária em Lisboa. Demonstração de site criada pela B4B Grow.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23b08d62%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2236%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Georgia%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700&family=Fraunces:wght@400;600&family=Karla:wght@400;600&family=Bodoni+Moda:wght@400;600&family=Manrope:wght@400;600&family=DM+Serif+Display&family=Nunito+Sans:wght@400;700&family=Sora:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Molde: comparação de 6 direções de design para a mesma página inicial.
+   A estrutura (blocos, informação, comportamentos) é a mesma; muda paleta, letras,
+   forma da capa, forma dos cartões, ordem dos blocos secundários e os textos. */
+:root {
+  color-scheme: light;
+  --c-bg: #ecebe7;
+  --c-barra: #1d1f22;
+  --c-barra-tinta: #f2f1ee;
+  --c-barra-suave: #a3a6ab;
+  --c-ativo: #ffffff;
+  --c-ativo-tinta: #1d1f22;
+  --c-ui: "IBM Plex Sans", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { background: var(--c-bg); color: var(--c-barra); font-family: var(--c-ui); }
+
+/* ---------- Página ---------- */
+body { background: #faf7f2; margin: 0; }
+html { scroll-behavior: smooth; }
+.ecra { container-type: inline-size; container-name: ecra; position: relative; }
+/* ---------- Tokens de cada direção ---------- */
+.site {
+  --fundo: #faf7f2; --fundo2: #f1ebe2; --tinta: #2b2622; --suave: #6f665e; --linha: #e3dace;
+  --marca: #b08d62; --marca-tinta: #ffffff; --marca-forte: #8a6b45; --escuro: #2b2622; --escuro-tinta: #f6f1ea;
+  --cartao: #ffffff; --sombra: none; --raio: 4px; --raio-btn: 999px; --raio-foto: 4px;
+  --f-titulo: "Cormorant Garamond", Georgia, serif; --f-texto: "Jost", system-ui, sans-serif;
+  --t-peso: 400; --t-caixa: none; --t-esp: 0; --t-alt: 1.05;
+  --foto-a: #e9dccb; --foto-b: #c9b398; --veu: 250, 246, 240;
+  font-family: var(--f-texto); color: var(--tinta); background: var(--fundo);
+  font-size: 16px; line-height: 1.6;
+}
+/* 1 Champanhe */
+.site[data-v="1"] { --t-caixa: uppercase; --t-esp: .02em; --t-alt: 1.08; }
+/* 2 Clínica Azul */
+.site[data-v="2"] {
+  --fundo: #ffffff; --fundo2: #f2f6fc; --tinta: #10213d; --suave: #5a6a82; --linha: #dfe7f2;
+  --marca: #1f63d6; --marca-tinta: #ffffff; --marca-forte: #164ca8; --escuro: #10213d; --escuro-tinta: #eef3fb;
+  --cartao: #ffffff; --sombra: 0 6px 24px rgba(16,33,61,.08); --raio: 12px; --raio-btn: 8px; --raio-foto: 12px;
+  --f-titulo: "Plus Jakarta Sans", system-ui, sans-serif; --f-texto: "Plus Jakarta Sans", system-ui, sans-serif;
+  --t-peso: 700; --t-esp: -.02em; --t-alt: 1.12;
+  --foto-a: #e7eef8; --foto-b: #b9c9de; --veu: 255, 255, 255;
+}
+/* 3 Sálvia */
+.site[data-v="3"] {
+  --fundo: #f6f5ef; --fundo2: #e6e9df; --tinta: #263228; --suave: #5e6b5f; --linha: #d5dacb;
+  --marca: #55705a; --marca-tinta: #ffffff; --marca-forte: #3f5643; --escuro: #2f3d32; --escuro-tinta: #eef1e8;
+  --cartao: #fbfaf6; --sombra: none; --raio: 18px; --raio-btn: 999px; --raio-foto: 18px;
+  --f-titulo: "Fraunces", Georgia, serif; --f-texto: "Karla", system-ui, sans-serif;
+  --t-peso: 400; --t-esp: -.01em; --t-alt: 1.1;
+  --foto-a: #dfe4d6; --foto-b: #a9b79f; --veu: 246, 245, 239;
+}
+/* 4 Noir */
+.site[data-v="4"] {
+  --fundo: #121212; --fundo2: #1b1a18; --tinta: #efe9df; --suave: #a59d90; --linha: #34312c;
+  --marca: #c6a46a; --marca-tinta: #121212; --marca-forte: #dcbd86; --escuro: #0b0b0b; --escuro-tinta: #efe9df;
+  --cartao: #1b1a18; --sombra: none; --raio: 0px; --raio-btn: 0px; --raio-foto: 0px;
+  --f-titulo: "Bodoni Moda", Georgia, serif; --f-texto: "Manrope", system-ui, sans-serif;
+  --t-peso: 400; --t-esp: 0; --t-alt: 1.08;
+  --foto-a: #3a342c; --foto-b: #15130f; --veu: 12, 12, 12;
+}
+/* 5 Rosé */
+.site[data-v="5"] {
+  --fundo: #fdf6f4; --fundo2: #f7e6e2; --tinta: #3d2228; --suave: #7d5f64; --linha: #efd6d1;
+  --marca: #9c3d54; --marca-tinta: #ffffff; --marca-forte: #7e2e42; --escuro: #4a2530; --escuro-tinta: #fdf0ee;
+  --cartao: #ffffff; --sombra: 0 10px 30px rgba(156,61,84,.08); --raio: 22px; --raio-btn: 999px; --raio-foto: 28px;
+  --f-titulo: "DM Serif Display", Georgia, serif; --f-texto: "Nunito Sans", system-ui, sans-serif;
+  --t-peso: 400; --t-esp: 0; --t-alt: 1.08;
+  --foto-a: #f3dcd6; --foto-b: #d9a9a6; --veu: 253, 246, 244;
+}
+/* 6 Petróleo */
+.site[data-v="6"] {
+  --fundo: #f7f8f7; --fundo2: #e8efee; --tinta: #0f2e33; --suave: #4d6a6e; --linha: #d3e0df;
+  --marca: #0f5c63; --marca-tinta: #ffffff; --marca-forte: #0a464c; --escuro: #0f2e33; --escuro-tinta: #e9f2f1;
+  --cartao: #ffffff; --sombra: none; --raio: 6px; --raio-btn: 6px; --raio-foto: 6px;
+  --f-titulo: "Sora", system-ui, sans-serif; --f-texto: "IBM Plex Sans", system-ui, sans-serif;
+  --t-peso: 600; --t-esp: -.03em; --t-alt: 1.1;
+  --foto-a: #d9e6e4; --foto-b: #8fb0ae; --veu: 247, 248, 247;
+}
+
+.site h1, .site h2, .site h3 { font-family: var(--f-titulo); font-weight: var(--t-peso); text-transform: var(--t-caixa); letter-spacing: var(--t-esp); line-height: var(--t-alt); text-wrap: balance; margin: 0; }
+.site p { margin: 0; }
+.site a { color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.olho { display: inline-block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--marca); font-weight: 600; }
+.site[data-v="4"] .olho { color: var(--marca); }
+.ic { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Botões */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 14.5px/1 var(--f-texto); padding: 15px 24px; border-radius: var(--raio-btn); border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+.btn:focus-visible, .site a:focus-visible, .site button:focus-visible { outline: 2px solid var(--marca); outline-offset: 3px; }
+.btn-marca { background: var(--marca); color: var(--marca-tinta); }
+.btn-marca:hover { background: var(--marca-forte); }
+.btn-linha { background: transparent; color: var(--tinta); border-color: currentColor; }
+.btn-linha:hover { background: var(--tinta); color: var(--fundo); }
+.site[data-v="1"] .btn, .site[data-v="4"] .btn { text-transform: uppercase; letter-spacing: .1em; font-size: 12.5px; font-weight: 500; }
+
+/* Foto provisória */
+.foto { position: relative; overflow: hidden; background:
+  radial-gradient(120% 90% at 75% 20%, rgba(255,255,255,.55), transparent 55%),
+  linear-gradient(140deg, var(--foto-a), var(--foto-b)); border-radius: var(--raio-foto); }
+.foto::before { content: ""; position: absolute; inset: -20%; background: repeating-linear-gradient(115deg, transparent 0 60px, rgba(255,255,255,.14) 60px 110px); transform: rotate(0deg); }
+.foto > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto.real::before { display: none; }
+.foto[data-legenda]::after { content: attr(data-legenda); position: absolute; right: 12px; bottom: 12px; max-width: calc(100% - 24px); font: 500 11.5px/1.35 var(--f-texto); color: #2b2b2b; background: rgba(255,255,255,.88); padding: 6px 10px; border-radius: 999px; }
+
+/* ---------- Topo: contactos (o painel lateral da referência mudou para aqui) ---------- */
+.topbar { background: var(--escuro); color: var(--escuro-tinta); font-size: 12.5px; }
+.site[data-v="2"] .topbar { background: var(--marca); color: #fff; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 8px; }
+.topbar .grupo { display: flex; gap: 18px; align-items: center; }
+.topbar a { display: inline-flex; gap: 6px; align-items: center; text-decoration: none; opacity: .92; }
+.topbar a:hover { opacity: 1; text-decoration: underline; }
+.topbar .ic { width: 15px; height: 15px; }
+
+.menu { position: sticky; top: 0; z-index: 20; background: var(--fundo); border-bottom: 1px solid var(--linha); }
+.site[data-v="4"] .menu { background: rgba(18,18,18,.96); }
+.menu .wrap { display: flex; align-items: center; gap: 28px; height: 74px; }
+.logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+.logo b { font-family: var(--f-titulo); font-weight: var(--t-peso); font-size: 28px; letter-spacing: var(--t-esp); text-transform: var(--t-caixa); }
+.site[data-v="1"] .logo b { letter-spacing: .14em; font-weight: 500; }
+.logo small { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--suave); margin-top: 5px; }
+.nav { display: flex; gap: 26px; margin-left: auto; align-items: center; }
+.nav > a, .nav .tem-mega > a { font-size: 14.5px; text-decoration: none; padding-block: 26px; display: inline-flex; gap: 4px; align-items: center; }
+.nav a:hover { color: var(--marca); }
+.nav .atual { color: var(--marca); }
+.tem-mega { position: relative; }
+.mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 640px; background: var(--cartao); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: 0 18px 40px rgba(0,0,0,.12); padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; }
+.tem-mega:hover .mega, .tem-mega:focus-within .mega { opacity: 1; visibility: visible; }
+.mega h4 { margin: 0 0 8px; font: 600 12px/1 var(--f-texto); letter-spacing: .12em; text-transform: uppercase; color: var(--marca); }
+.mega h4 a { text-decoration: none; }
+.mega ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; font-size: 14px; }
+.mega ul a { text-decoration: none; color: var(--suave); }
+.mega ul a:hover { color: var(--tinta); }
+.menu .btn { padding: 12px 20px; }
+.burger { display: none; margin-left: auto; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--linha); background: transparent; color: var(--tinta); align-items: center; justify-content: center; cursor: pointer; }
+.painel { display: none; }
+
+/* ---------- Capa ---------- */
+.capa { position: relative; overflow: hidden; }
+.capa-texto { position: relative; z-index: 2; max-width: 540px; display: grid; gap: 22px; }
+.capa h1 { font-size: 60px; }
+.capa .sub { font-size: 17px; color: var(--suave); max-width: 44ch; }
+.acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+.capa-base { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; padding-top: 22px; border-top: 1px solid var(--linha); }
+.link-trat { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; text-decoration: none; color: var(--tinta); }
+.link-trat .ic { transition: transform .2s; }
+.link-trat:hover .ic { transform: translateX(4px); }
+.google { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 13.5px; color: var(--suave); }
+.google b { font-size: 20px; color: var(--tinta); font-family: var(--f-titulo); }
+.estrelas { color: #e0a526; letter-spacing: 1px; }
+.capa-foto { position: absolute; inset: 0; border-radius: 0; z-index: 0; }
+.capa-foto[data-legenda]::after { bottom: auto; top: 16px; right: 16px; }
+.capa-veu { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.capa-in { position: relative; z-index: 2; display: flex; align-items: center; min-height: 640px; padding-block: 64px; }
+.mosaico { display: none; }
+
+/* 1 Champanhe: foto inteira, véu creme da esquerda */
+.site[data-v="1"] .capa-veu { background: linear-gradient(90deg, rgba(var(--veu),1) 28%, rgba(var(--veu),.75) 48%, rgba(var(--veu),0) 72%); }
+.site[data-v="1"] .capa h1 { font-size: 64px; }
+/* 2 Clínica Azul: foto inteira, véu branco, base em faixa branca */
+.site[data-v="2"] .capa-veu { background: linear-gradient(90deg, rgba(var(--veu),.97) 30%, rgba(var(--veu),.7) 50%, rgba(var(--veu),0) 70%); }
+.site[data-v="2"] .capa-base { border-top: 0; background: #fff; box-shadow: var(--sombra); border-radius: 12px; padding: 16px 20px; }
+.site[data-v="2"] .capa .olho { color: var(--marca); }
+/* 3 Sálvia: texto à esquerda, foto em arco à direita */
+.site[data-v="3"] .capa { background: var(--fundo2); }
+.site[data-v="3"] .capa-in { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; }
+.capa-lado { display: none; }
+.site[data-v="3"] .capa-foto, .site[data-v="3"] .capa-veu, .site[data-v="5"] .capa-foto, .site[data-v="5"] .capa-veu { display: none; }
+.site[data-v="3"] .capa-lado { display: block; height: 560px; border-radius: 300px 300px 18px 18px; order: 2; max-width: 100%; }
+/* 4 Noir: foto escura em ecrã inteiro, texto em baixo */
+.site[data-v="4"] .capa-veu { background: linear-gradient(0deg, rgba(var(--veu),.92) 8%, rgba(var(--veu),.45) 55%, rgba(var(--veu),.25)); }
+.site[data-v="4"] .capa-in { align-items: flex-end; min-height: 680px; }
+.site[data-v="4"] .capa-texto { max-width: 720px; }
+.site[data-v="4"] .capa h1 { font-size: 66px; }
+.site[data-v="4"] .capa h1 em { color: var(--marca); }
+/* 5 Rosé: foto em moldura arredondada, selo do Google por cima */
+.site[data-v="5"] .capa-in { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; }
+.site[data-v="5"] .capa-lado { display: block; height: 560px; order: 2; max-width: 100%; }
+.site[data-v="5"] .capa { background: var(--fundo); }
+.site[data-v="5"] .capa-in::before { content: ""; position: absolute; right: -80px; top: -60px; width: 360px; height: 360px; border-radius: 50%; background: var(--fundo2); z-index: -1; }
+/* 6 Petróleo: texto + mosaico de 3 fotos */
+.site[data-v="6"] .capa-in { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; }
+.site[data-v="6"] .capa-foto, .site[data-v="6"] .capa-veu { display: none; }
+.site[data-v="6"] .mosaico { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; height: 540px; order: 2; }
+.site[data-v="6"] .mosaico .foto:first-child { grid-row: span 2; }
+.site[data-v="6"] .capa { background: linear-gradient(180deg, var(--fundo) 0 70%, var(--fundo2) 70%); }
+
+.capa h1 em { font-style: italic; color: var(--marca); }
+.site[data-v="2"] .capa h1 em, .site[data-v="6"] .capa h1 em { font-style: normal; }
+
+/* ---------- Blocos ---------- */
+.blocos { display: flex; flex-direction: column; }
+.bloco { padding-block: 96px; background: var(--fundo); }
+.bloco.alt { background: var(--fundo2); }
+.cabeca { display: grid; gap: 12px; margin-bottom: 44px; max-width: 640px; }
+.cabeca.centro { margin-inline: auto; text-align: center; justify-items: center; }
+.cabeca h2 { font-size: 44px; }
+.cabeca p { color: var(--suave); }
+.site[data-v="2"] .cabeca, .site[data-v="5"] .cabeca { margin-inline: auto; text-align: center; justify-items: center; }
+
+/* Tratamentos */
+.cartoes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.cartao { background: var(--cartao); border-radius: var(--raio); box-shadow: var(--sombra); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; border: 1px solid var(--linha); transition: transform .25s; }
+.cartao:hover { transform: translateY(-4px); }
+.cartao .foto { aspect-ratio: 4/3.4; border-radius: 0; max-width: 100%; }
+.cartao-txt { padding: 20px; display: grid; gap: 8px; flex: 1; align-content: start; }
+.cartao h3 { font-size: 22px; }
+.site[data-v="2"] .cartao h3, .site[data-v="6"] .cartao h3 { font-size: 18px; }
+.cartao p { color: var(--suave); font-size: 14.5px; }
+.cartao .mais { margin-top: auto; padding-top: 8px; display: inline-flex; gap: 6px; align-items: center; font-weight: 600; font-size: 13.5px; color: var(--marca); }
+.ver-todos { margin-top: 36px; display: flex; justify-content: center; }
+.site[data-v="1"] .cartao { border: 0; background: transparent; }
+.site[data-v="1"] .cartao .foto { aspect-ratio: 3/4; }
+.site[data-v="1"] .cartao-txt { padding: 18px 2px; }
+.site[data-v="3"] .cartoes { grid-template-columns: repeat(2, 1fr); }
+.site[data-v="3"] .cartao { flex-direction: row; }
+.site[data-v="3"] .cartao .foto { width: 42%; aspect-ratio: auto; min-height: 190px; }
+.site[data-v="4"] .cartao { position: relative; border: 0; }
+.site[data-v="4"] .cartao .foto { aspect-ratio: 3/4.2; }
+.site[data-v="4"] .cartao-txt { position: absolute; inset: auto 0 0 0; background: linear-gradient(0deg, rgba(10,10,10,.92), rgba(10,10,10,0)); padding-top: 60px; }
+.site[data-v="5"] .cartao { border: 0; }
+.site[data-v="5"] .cartao .foto { margin: 10px 10px 0; border-radius: calc(var(--raio) - 6px); }
+.site[data-v="6"] .cartao { border-width: 0 0 3px; border-color: var(--marca); }
+
+/* Áreas de tratamento */
+.areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.area { background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 90px; }
+.area > .foto { aspect-ratio: 4 / 3; border-radius: 0; max-width: 100%; }
+.area-txt { padding: 26px 24px 24px; display: grid; gap: 14px; }
+.area h3 { font-size: 28px; }
+.area-desc { color: var(--suave); font-size: 15px; }
+.cats { display: grid; gap: 14px; padding-top: 14px; border-top: 1px solid var(--linha); }
+.cat h4 { margin: 0 0 7px; font: 600 11.5px/1.2 var(--f-texto); letter-spacing: .14em; text-transform: uppercase; color: var(--marca-forte); }
+.procs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.procs li { font-size: 13px; line-height: 1.2; padding: 7px 11px; border-radius: 999px; background: var(--fundo2); color: var(--tinta); }
+.area-btn { margin-top: 6px; justify-content: space-between; }
+
+/* Duplas (filosofia, tecnologia, espaço) */
+.dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.dupla .texto { display: grid; gap: 18px; align-content: start; min-width: 0; }
+.dupla h2 { font-size: 42px; }
+.dupla p { color: var(--suave); }
+.dupla .foto { aspect-ratio: 5/4.4; max-width: 100%; }
+.dupla.inverte .foto { order: -1; }
+.link-seta { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; text-decoration: none; color: var(--marca); }
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.lista li { display: flex; gap: 10px; align-items: center; }
+.lista .ic { color: var(--marca); }
+.morada { display: flex; gap: 14px; padding: 18px; border: 1px solid var(--linha); border-radius: var(--raio); background: var(--cartao); }
+.morada .ic { color: var(--marca); margin-top: 3px; }
+.morada b { display: block; }
+.morada span { color: var(--suave); font-size: 14.5px; }
+
+/* Resultados */
+.resultados { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.res { text-decoration: none; display: grid; gap: 12px; cursor: pointer; }
+.res-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-radius: var(--raio-foto); overflow: hidden; position: relative; }
+.res-fotos .foto { aspect-ratio: 4/5; border-radius: 0; }
+.res-fotos.uma { grid-template-columns: 1fr; }
+.res-fotos.uma .foto { aspect-ratio: 4/3; }
+.res-vela { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0,0,0,.35); color: #fff; font-weight: 600; opacity: 0; transition: opacity .25s; z-index: 2; }
+.res:hover .res-vela, .res:focus-visible .res-vela { opacity: 1; }
+.res p { font-weight: 600; }
+.res small { color: var(--suave); font-weight: 400; }
+
+/* Equipa */
+.equipa { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pessoa { display: grid; gap: 12px; }
+.pessoa .foto { aspect-ratio: 4/5; }
+.pessoa h3 { font-size: 22px; }
+.site[data-v="2"] .pessoa h3, .site[data-v="6"] .pessoa h3 { font-size: 18px; }
+.pessoa p { color: var(--suave); font-size: 14px; }
+.site[data-v="5"] .pessoa .foto { border-radius: 999px 999px var(--raio-foto) var(--raio-foto); }
+
+/* Depoimentos */
+.bloco.depo { background: var(--escuro); color: var(--escuro-tinta); }
+.site[data-v="1"] .bloco.depo { background: var(--marca); color: #fff; }
+.site[data-v="5"] .bloco.depo { background: var(--fundo2); color: var(--tinta); }
+.depo .cabeca p { color: inherit; opacity: .8; }
+.depos { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 3); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
+.depos::-webkit-scrollbar { display: none; }
+.dep { scroll-snap-align: start; padding: 26px; border-radius: var(--raio); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); display: grid; gap: 14px; align-content: start; }
+.site[data-v="5"] .dep { background: #fff; border-color: var(--linha); }
+.dep p { font-size: 15.5px; }
+.dep footer { font-size: 13.5px; opacity: .8; }
+.depo-nav { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; }
+.depo-nav button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; display: grid; place-items: center; }
+.nota-depo { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; }
+
+/* Chamada final e rodapé */
+.cta { background: var(--fundo2); padding-block: 88px; text-align: center; }
+.cta .wrap { display: grid; gap: 18px; justify-items: center; }
+.cta h2 { font-size: 46px; }
+.cta p { color: var(--suave); max-width: 52ch; }
+.rodape { background: var(--escuro); color: var(--escuro-tinta); padding-block: 64px 28px; font-size: 14px; }
+.rodape-grelha { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 32px; }
+.rodape h4 { margin: 0 0 12px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; opacity: .7; font-weight: 600; }
+.rodape ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rodape a { text-decoration: none; opacity: .9; }
+.rodape a:hover { text-decoration: underline; }
+.rodape .logo small { color: inherit; opacity: .7; }
+.rodape .legal { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 12.5px; opacity: .75; }
+
+/* Prova social do Google, por baixo dos botões da capa */
+.prova { display: flex; align-items: center; gap: 14px; text-decoration: none; justify-self: stretch; max-width: 470px; padding-top: 22px; border-top: 1px solid var(--linha); }
+.rostos { display: flex; }
+.rostos span { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font: 500 13px/1 var(--f-titulo); color: var(--marca-forte); background: linear-gradient(140deg, var(--foto-a), var(--fundo2)); border: 2px solid var(--fundo); margin-left: -10px; }
+.rostos span:first-child { margin-left: 0; }
+.rostos .mais-r { background: var(--marca); color: var(--marca-tinta); font-family: var(--f-texto); }
+.prova-txt { display: grid; gap: 2px; line-height: 1.2; }
+.prova-linha { display: flex; align-items: baseline; gap: 10px; }
+.prova-linha b { font: 500 26px/1 var(--f-titulo); color: var(--tinta); }
+.prova-linha .estrelas { font-size: 14px; letter-spacing: 2px; }
+.prova-sub { font-size: 13px; color: var(--suave); letter-spacing: .02em; }
+.prova:hover .prova-sub { color: var(--tinta); }
+
+/* Escolha de idioma */
+.idioma { position: relative; }
+.idioma-btn { display: inline-flex; align-items: center; gap: 4px; height: 40px; padding: 0 10px; border: 1px solid var(--linha); border-radius: 999px; background: transparent; color: var(--tinta); font: 500 13px/1 var(--f-texto); letter-spacing: .08em; cursor: pointer; }
+.idioma-btn .ic { width: 14px; height: 14px; transition: transform .2s; }
+.idioma-btn[aria-expanded="true"] .ic { transform: rotate(180deg); }
+.idioma-btn:hover { border-color: var(--marca); }
+.idioma-lista { position: absolute; top: calc(100% + 8px); right: 0; min-width: 160px; margin: 0; padding: 6px; list-style: none; background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; box-shadow: 0 14px 30px rgba(0,0,0,.1); z-index: 30; }
+.idioma-lista li { padding: 9px 10px; border-radius: 6px; font-size: 14px; color: var(--suave); cursor: pointer; display: flex; gap: 10px; }
+.idioma-lista li b { color: var(--tinta); font-weight: 600; letter-spacing: .06em; width: 22px; }
+.idioma-lista li:hover, .idioma-lista li:focus-visible { background: var(--fundo2); outline: none; }
+.idioma-lista li[aria-selected="true"] { color: var(--marca); }
+
+/* Barra de baixo (telemóvel) e WhatsApp flutuante (computador) */
+.barra-baixo { display: none; }
+.whats-flutua { position: fixed; right: calc(22px + env(safe-area-inset-right, 0px)); bottom: calc(22px + env(safe-area-inset-bottom, 0px)); z-index: 30; width: 56px; height: 56px; border-radius: 50%; background: #1f9d55; color: #fff; display: grid; place-items: center; border: 0; box-shadow: 0 8px 24px rgba(0,0,0,.2); text-decoration: none; }
+.whats-flutua .ic { width: 26px; height: 26px; }
+.whats-flutua::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #1f9d55; animation: pulso 2.4s ease-out infinite; }
+@keyframes pulso { from { transform: scale(1); opacity: .8; } to { transform: scale(1.5); opacity: 0; } }
+
+/* Janela "Como prefere agendar?" */
+.janela { position: fixed; inset: 0; z-index: 40; background: rgba(15,15,15,.55); display: grid; place-items: center; padding: 20px; opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
+.janela.aberta { opacity: 1; visibility: visible; }
+.janela-caixa { width: min(720px, 100%); background: var(--fundo); color: var(--tinta); border-radius: 20px; padding: 36px; display: grid; gap: 26px; position: relative; max-height: 100%; overflow: auto; transform: translateY(16px); transition: transform .3s; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
+.janela.aberta .janela-caixa { transform: none; }
+.j-topo { display: grid; gap: 10px; padding-right: 48px; }
+.j-olho { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--marca); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.j-olho::before { content: ""; width: 26px; height: 1px; background: var(--marca); }
+.janela h2 { font-size: 36px; text-transform: none; letter-spacing: 0; }
+.janela .sub { color: var(--suave); font-size: 15.5px; max-width: 46ch; }
+.escolhas { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.escolha { --cor: var(--marca); --cor-fundo: var(--fundo2); text-decoration: none; padding: 24px; border-radius: 14px; border: 1px solid var(--linha); background: var(--cartao); display: flex; flex-direction: column; gap: 12px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+.escolha.verde { --cor: #2e7d55; --cor-fundo: #e7f2eb; }
+.escolha.principal { background: linear-gradient(180deg, #fffdf9, var(--cartao)); border-color: color-mix(in srgb, var(--marca) 45%, var(--linha)); }
+.escolha:hover, .escolha:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(60,40,20,.10); border-color: var(--cor); }
+.escolha-cima { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+.j-ic { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--cor-fundo); color: var(--cor); flex: none; }
+.j-ic .ic { width: 22px; height: 22px; stroke-width: 1.6; }
+.escolha .selo { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: var(--cor-fundo); color: var(--cor); text-align: right; }
+.escolha h3 { font-size: 25px; text-transform: none; letter-spacing: 0; font-weight: 500; }
+.escolha p { color: var(--suave); font-size: 14.5px; line-height: 1.55; flex: 1; }
+.j-btn { margin-top: 6px; display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 18px; border-radius: 999px; font-size: 12.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.j-btn .ic { width: 16px; height: 16px; transition: transform .25s; }
+.escolha:hover .j-btn .ic { transform: translateX(4px); }
+.j-btn-marca { background: var(--marca); color: var(--marca-tinta); }
+.escolha.principal:hover .j-btn-marca { background: var(--marca-forte); }
+.j-btn-verde { background: transparent; color: var(--cor); box-shadow: inset 0 0 0 1px var(--cor); }
+.escolha.verde:hover .j-btn-verde { background: var(--cor); color: #fff; }
+.fechar { position: absolute; top: 18px; right: 18px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--linha); background: var(--cartao); color: var(--tinta); cursor: pointer; display: grid; place-items: center; transition: transform .25s, border-color .25s; }
+.fechar:hover { transform: rotate(90deg); border-color: var(--marca); }
+.janela-rodape { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-top: 1px solid var(--linha); padding-top: 20px; }
+.j-info { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 14px; line-height: 1.35; color: var(--tinta); }
+.j-info small { color: var(--suave); font-size: 12.5px; }
+.j-info b { font-family: var(--f-titulo); font-size: 18px; font-weight: 500; }
+.j-info .estrelas { font-size: 12px; letter-spacing: 1.5px; }
+a.j-info:hover small { color: var(--marca); text-decoration: underline; }
+.j-mini { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--fundo2); color: var(--marca); flex: none; }
+.j-mini .ic { width: 17px; height: 17px; }
+
+/* ---------- Tablet ---------- */
+@container ecra (max-width: 1000px) {
+  .nav { gap: 18px; }
+  .nav > a.so-largo { display: none; }
+  .capa h1, .site[data-v="1"] .capa h1, .site[data-v="4"] .capa h1 { font-size: 48px; }
+  .cartoes { grid-template-columns: repeat(2, 1fr); }
+  .areas { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
+  .site[data-v="3"] .cartoes { grid-template-columns: 1fr; }
+  .dupla { gap: 40px; }
+  .rodape-grelha { grid-template-columns: 1fr 1fr; }
+  .depos { grid-auto-columns: calc((100% - 20px) / 2); }
+  .site[data-v="3"] .capa-in, .site[data-v="5"] .capa-in, .site[data-v="6"] .capa-in { gap: 32px; }
+}
+@container ecra (max-width: 820px) {
+  .nav, .menu .wrap > .btn { display: none; }
+  .burger { display: inline-flex; margin-left: 8px; }
+  .idioma { margin-left: auto; }
+  .painel { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--fundo); border-bottom: 1px solid var(--linha); max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  .painel.aberto { max-height: 900px; }
+  .painel-in { padding: 8px 24px 24px; display: grid; gap: 4px; }
+  .painel-in > a { padding: 12px 0; border-bottom: 1px solid var(--linha); text-decoration: none; font-size: 17px; }
+  .painel-in details { border-bottom: 1px solid var(--linha); }
+  .painel-in summary { padding: 12px 0; font-size: 17px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+  .painel-in details ul { list-style: none; margin: 0 0 12px; padding: 0 0 0 12px; display: grid; gap: 8px; }
+  .painel-in details h5 { margin: 8px 0 2px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--marca); }
+  .painel-in details a { text-decoration: none; color: var(--suave); }
+  .painel-in .btn { margin-top: 14px; }
+  .topbar .esconde-curto { display: none; }
+}
+
+/* ---------- Telemóvel ---------- */
+@container ecra (max-width: 640px) {
+  .wrap { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+  .topbar .wrap { justify-content: center; }
+  .topbar .grupo:first-child { display: none; }
+  .menu .wrap { height: 64px; }
+  .logo b { font-size: 24px; }
+  .capa h1, .site[data-v="1"] .capa h1, .site[data-v="4"] .capa h1 { font-size: 38px; }
+  .capa .sub { font-size: 16px; }
+  .acoes .btn { flex: 1 1 100%; }
+  /* Foto de fundo (1, 2, 4): o véu passa a vir de baixo e o texto desce */
+  .site[data-v="1"] .capa-in, .site[data-v="2"] .capa-in, .site[data-v="4"] .capa-in { align-items: flex-end; min-height: 660px; padding-block: 220px 40px; }
+  .site[data-v="1"] .capa-veu, .site[data-v="2"] .capa-veu { background: linear-gradient(0deg, rgba(var(--veu),1) 52%, rgba(var(--veu),.6) 70%, rgba(var(--veu),0) 92%); }
+  .site[data-v="4"] .capa-veu { background: linear-gradient(0deg, rgba(var(--veu),.96) 45%, rgba(var(--veu),.4) 80%, rgba(var(--veu),.2)); }
+  .site[data-v="2"] .capa-base { padding: 14px; }
+  /* Foto ao lado (3, 5, 6): empilha, foto primeiro */
+  .site[data-v="3"] .capa-in, .site[data-v="5"] .capa-in, .site[data-v="6"] .capa-in { grid-template-columns: 1fr; min-height: 0; padding-block: 20px 48px; gap: 28px; }
+  .site[data-v="3"] .capa-lado, .site[data-v="5"] .capa-lado { order: -1; height: 340px; }
+  .site[data-v="3"] .capa-lado { border-radius: 200px 200px 18px 18px; }
+  .site[data-v="6"] .mosaico { order: -1; height: 300px; }
+  .site[data-v="5"] .capa-in::before { display: none; }
+  .foto[data-legenda]::after { font-size: 10.5px; }
+  .bloco { padding-block: 64px; }
+  .cabeca { margin-bottom: 30px; }
+  .cabeca h2, .dupla h2 { font-size: 32px; }
+  .cta h2 { font-size: 34px; }
+  .cartoes, .site[data-v="3"] .cartoes { grid-template-columns: 1fr; }
+  .site[data-v="3"] .cartao { flex-direction: column; }
+  .site[data-v="3"] .cartao .foto { width: 100%; aspect-ratio: 16/9; min-height: 0; }
+  .dupla { grid-template-columns: 1fr; gap: 28px; }
+  .dupla .foto { order: -1; }
+  .resultados, .equipa { grid-template-columns: 1fr; }
+  .equipa { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .pessoa { scroll-snap-align: start; }
+  .depos { grid-auto-columns: 86%; }
+  .rodape-grelha { grid-template-columns: 1fr; }
+  .rodape { padding-bottom: 96px; }
+  .whats-flutua { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); right: 16px; width: 52px; height: 52px; }
+  .idioma { margin-left: auto; }
+  .burger { margin-left: 8px; }
+  .prova { min-width: 0; }
+  .barra-baixo { display: grid; grid-template-columns: 1fr; gap: 10px; position: sticky; bottom: 0; z-index: 25; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--fundo); border-top: 1px solid var(--linha); transform: translateY(110%); transition: transform .3s ease; margin-top: -72px; }
+  .barra-baixo.ver { transform: none; }
+  .barra-baixo .btn { padding: 14px 12px; }
+  .btn-whats { background: #1f9d55; color: #fff; }
+  .janela { place-items: end stretch; padding: 0; }
+  .janela-caixa { border-radius: 24px 24px 0 0; padding: 30px 18px calc(22px + env(safe-area-inset-bottom, 0px)); gap: 20px; transform: translateY(100%); }
+  .janela-caixa::before { content: ""; position: absolute; top: 10px; left: 50%; width: 40px; height: 4px; margin-left: -20px; border-radius: 4px; background: var(--linha); }
+  .escolhas { grid-template-columns: 1fr; gap: 12px; }
+  .escolha { padding: 18px; gap: 8px; }
+  .escolha h3 { font-size: 22px; }
+  .janela h2 { font-size: 28px; }
+  .janela-rodape { grid-template-columns: 1fr; gap: 12px; }
+}
+
+@container ecra (max-width: 640px) {
+  /* No telemóvel a foto da receção fica inteira por cima e o texto por baixo */
+  .site[data-v="1"] .capa-foto { position: relative; inset: auto; height: 300px; }
+  .site[data-v="1"] .capa-foto img { object-position: 88% center !important; }
+  .site[data-v="1"] .capa-veu { display: none; }
+  .site[data-v="1"] .capa-in { min-height: 0; padding-block: 30px 44px; align-items: flex-start; }
+  .site[data-v="1"] .capa h1 { font-size: 36px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-whats" viewBox="0 0 24 24"><path d="M20.6 11.7a8.6 8.6 0 0 1-12.7 7.6L3.4 20.6l1.4-4.3a8.6 8.6 0 1 1 15.8-4.6z"/><path d="M9.1 8.1c.3-.3.7-.4 1-.2l.9.5c.3.2.4.6.3.9l-.4 1c.5 1 1.3 1.8 2.3 2.3l1-.4c.3-.1.7 0 .9.3l.5.9c.2.3.1.7-.2 1-.7.6-1.6.8-2.4.5a6.6 6.6 0 0 1-4.1-4.1c-.3-.8-.1-1.7.5-2.4z"/></symbol>
+  <symbol id="i-agenda-ok" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 3.8l2.4 5 5.4.7-4 3.8 1 5.4L12 16.1l-4.8 2.6 1-5.4-4-3.8 5.4-.7z"/></symbol>
+  <symbol id="i-pino" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-esq" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-dir" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-baixo" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+</svg>
+
+<div class="ecra" id="ecra">
+<div class="site" id="site" data-v="1">
+
+        <header class="menu">
+          <div class="wrap">
+            <a class="logo" href="#topo"><b>Aurora</b><small>clínica</small></a>
+            <nav class="nav" aria-label="Principal">
+              <a href="#topo" class="atual">Início</a>
+              <div class="tem-mega">
+                <a href="#tratamentos">Tratamentos <svg class="ic" style="width:14px;height:14px"><use href="#i-baixo"/></svg></a>
+                <div class="mega">
+                  <div><h4><a href="#area-medicina-estetica">Medicina Estética</a></h4><ul><li><a href="#area-medicina-estetica">Rugas e expressão</a></li><li><a href="#area-medicina-estetica">Preenchimentos</a></li><li><a href="#area-medicina-estetica">Qualidade da pele</a></li><li><a href="#area-medicina-estetica">Corpo</a></li></ul></div>
+                  <div><h4><a href="#area-estetica-avancada">Estética Avançada</a></h4><ul><li><a href="#area-estetica-avancada">Tecnologias faciais</a></li><li><a href="#area-estetica-avancada">Cuidados de pele</a></li><li><a href="#area-estetica-avancada">Corpo</a></li><li><a href="#area-estetica-avancada">Depilação</a></li></ul></div>
+                  <div><h4><a href="#area-medicina-dentaria">Medicina Dentária</a></h4><ul><li><a href="#area-medicina-dentaria">Implantologia</a></li><li><a href="#area-medicina-dentaria">Ortodontia</a></li><li><a href="#area-medicina-dentaria">Estética dentária</a></li><li><a href="#area-medicina-dentaria">Dentisteria e prevenção</a></li><li><a href="#area-medicina-dentaria">Endodontia e gengivas</a></li></ul></div>
+                </div>
+              </div>
+              <a href="#filosofia">A Clínica</a>
+              <a href="#resultados" class="so-largo">Resultados</a>
+              <a href="#contactos">Contactos</a>
+            </nav>
+            <div class="idioma" id="idioma">
+              <button type="button" class="idioma-btn" id="idioma-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma: Português">
+                <span id="idioma-atual">PT</span><svg class="ic"><use href="#i-baixo"/></svg>
+              </button>
+              <ul class="idioma-lista" id="idioma-lista" role="listbox" aria-label="Idioma" hidden>
+                <li role="option" aria-selected="true" data-lang="PT" tabindex="0"><b>PT</b> Português</li>
+                <li role="option" aria-selected="false" data-lang="ES" tabindex="0"><b>ES</b> Español</li>
+                <li role="option" aria-selected="false" data-lang="EN" tabindex="0"><b>EN</b> English</li>
+              </ul>
+            </div>
+            <button class="btn btn-marca" type="button" data-agendar>Agendar consulta</button>
+            <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="painel" aria-label="Abrir menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+          </div>
+          <div class="painel" id="painel">
+            <div class="painel-in">
+              <a href="#topo">Início</a>
+              <details><summary>Tratamentos <svg class="ic"><use href="#i-baixo"/></svg></summary>
+                <h5>Medicina Estética</h5><ul><li><a href="#area-medicina-estetica">Rugas e expressão</a></li><li><a href="#area-medicina-estetica">Preenchimentos</a></li><li><a href="#area-medicina-estetica">Qualidade da pele</a></li><li><a href="#area-medicina-estetica">Corpo</a></li></ul>
+                <h5>Estética Avançada</h5><ul><li><a href="#area-estetica-avancada">Tecnologias faciais</a></li><li><a href="#area-estetica-avancada">Cuidados de pele</a></li><li><a href="#area-estetica-avancada">Corpo</a></li><li><a href="#area-estetica-avancada">Depilação</a></li></ul>
+                <h5>Medicina Dentária</h5><ul><li><a href="#area-medicina-dentaria">Implantologia</a></li><li><a href="#area-medicina-dentaria">Ortodontia</a></li><li><a href="#area-medicina-dentaria">Estética dentária</a></li><li><a href="#area-medicina-dentaria">Dentisteria e prevenção</a></li><li><a href="#area-medicina-dentaria">Endodontia e gengivas</a></li></ul>
+              </details>
+              <a href="#filosofia">A Clínica</a>
+              <a href="#resultados">Resultados</a>
+              <a href="#contactos">Contactos</a>
+              <button class="btn btn-marca" type="button" data-agendar>Agendar consulta</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="capa" id="topo">
+          <div class="capa-foto foto real"><img src="img/capa.jpg" alt="Receção da Aurora Clínica" fetchpriority="high" style="object-position:70% center"></div>
+          <div class="capa-veu"></div>
+          <div class="wrap capa-in">
+            <div class="capa-texto">
+              <span class="olho" data-t="olho"></span>
+              <h1 data-t="h1"></h1>
+              <p class="sub" data-t="sub"></p>
+              <div class="acoes">
+                <button class="btn btn-marca" type="button" data-agendar><svg class="ic"><use href="#i-agenda"/></svg>Agendar consulta</button>
+                <a class="btn btn-linha" href="#tratamentos">Conhecer tratamentos</a>
+              </div>
+              <a class="prova" href="#depoimentos" aria-label="4,9 em 5 no Google, 300 avaliações">
+                <span class="rostos" aria-hidden="true"><span>M</span><span>A</span><span>C</span><span class="mais-r">+</span></span>
+                <span class="prova-txt">
+                  <span class="prova-linha"><b>4,9</b><span class="estrelas">★★★★★</span></span>
+                  <span class="prova-sub">300 avaliações no Google</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <main class="blocos" id="blocos">
+          <section class="bloco" data-b="trat" id="tratamentos">
+            <div class="wrap">
+              <div class="cabeca"><span class="olho" data-t="trat-olho"></span><h2 data-t="trat"></h2><p data-t="trat-sub"></p></div>
+              <div class="areas">
+                <article class="area" id="area-medicina-estetica">
+                  <div class="foto real"><img src="img/medicina-estetica.jpg" alt="Médica a avaliar o rosto de uma paciente" loading="lazy" style="object-position:center"></div>
+                  <div class="area-txt">
+                    <h3>Medicina Estética</h3>
+                    <p class="area-desc">Tratamentos médicos injetáveis para o rosto e o corpo, feitos com naturalidade.</p>
+                    <div class="cats">
+                    <div class="cat"><h4>Rugas e expressão</h4><ul class="procs"><li>Toxina botulínica</li><li>Toxina de longa duração</li></ul></div>
+                    <div class="cat"><h4>Preenchimentos</h4><ul class="procs"><li>Ácido hialurónico</li><li>Preenchimento labial</li><li>Rinomodelação</li><li>Harmonização facial</li></ul></div>
+                    <div class="cat"><h4>Qualidade da pele</h4><ul class="procs"><li>Bioestimuladores de colagénio</li><li>Skinbooster</li><li>PDRN</li><li>Mesoterapia facial</li></ul></div>
+                    <div class="cat"><h4>Corpo</h4><ul class="procs"><li>Lipólise enzimática</li><li>Preenchimento de glúteos</li></ul></div>
+                    </div>
+                    <button class="btn btn-linha area-btn" type="button" data-agendar>Marcar avaliação <svg class="ic"><use href="#i-seta"/></svg></button>
+                  </div>
+                </article>
+                <article class="area" id="area-estetica-avancada">
+                  <div class="foto real"><img src="img/estetica-avancada.jpg" alt="Tratamento facial com radiofrequência" loading="lazy" style="object-position:center"></div>
+                  <div class="area-txt">
+                    <h3>Estética Avançada</h3>
+                    <p class="area-desc">Tecnologia e protocolos de cabine para a pele, o rosto e o corpo.</p>
+                    <div class="cats">
+                    <div class="cat"><h4>Tecnologias faciais</h4><ul class="procs"><li>HIFU</li><li>Radiofrequência microagulhada</li><li>Laser CO2 fracionado</li><li>Luz pulsada (IPL)</li></ul></div>
+                    <div class="cat"><h4>Cuidados de pele</h4><ul class="procs"><li>Limpeza de pele profunda</li><li>Peeling químico</li><li>Hydrafacial</li><li>Microagulhamento</li></ul></div>
+                    <div class="cat"><h4>Corpo</h4><ul class="procs"><li>Criolipólise</li><li>Radiofrequência corporal</li><li>Drenagem linfática</li><li>Pressoterapia</li></ul></div>
+                    <div class="cat"><h4>Depilação</h4><ul class="procs"><li>Depilação a laser</li></ul></div>
+                    </div>
+                    <button class="btn btn-linha area-btn" type="button" data-agendar>Marcar avaliação <svg class="ic"><use href="#i-seta"/></svg></button>
+                  </div>
+                </article>
+                <article class="area" id="area-medicina-dentaria">
+                  <div class="foto real"><img src="img/medicina-dentaria.jpg" alt="Médica dentista a explicar um tratamento à paciente" loading="lazy" style="object-position:center"></div>
+                  <div class="area-txt">
+                    <h3>Medicina Dentária</h3>
+                    <p class="area-desc">Saúde e estética do sorriso, da prevenção à reabilitação com implantes.</p>
+                    <div class="cats">
+                    <div class="cat"><h4>Implantologia</h4><ul class="procs"><li>Implantes dentários</li><li>Carga imediata</li><li>Enxerto ósseo</li></ul></div>
+                    <div class="cat"><h4>Ortodontia</h4><ul class="procs"><li>Alinhadores invisíveis</li><li>Aparelho fixo</li></ul></div>
+                    <div class="cat"><h4>Estética dentária</h4><ul class="procs"><li>Branqueamento</li><li>Facetas</li><li>Harmonização do sorriso</li></ul></div>
+                    <div class="cat"><h4>Dentisteria e prevenção</h4><ul class="procs"><li>Consulta de avaliação</li><li>Higiene oral</li><li>Restaurações</li></ul></div>
+                    <div class="cat"><h4>Endodontia e gengivas</h4><ul class="procs"><li>Desvitalização</li><li>Tratamento de gengivas</li></ul></div>
+                    </div>
+                    <button class="btn btn-linha area-btn" type="button" data-agendar>Marcar avaliação <svg class="ic"><use href="#i-seta"/></svg></button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="bloco" data-b="filo" id="filosofia">
+            <div class="wrap dupla">
+              <div class="texto">
+                <span class="olho" data-t="filo-olho"></span>
+                <h2 data-t="filo"></h2>
+                <p>Cada plano começa por uma avaliação. Estudamos o rosto, a pele e o sorriso, ouvimos o que o incomoda e propomos só o que faz sentido para si.</p>
+                <p>Trabalhamos com tempo e com protocolos ajustados a cada pessoa, para um resultado natural.</p>
+                <a class="link-seta" href="#filosofia">Conhecer a clínica <svg class="ic"><use href="#i-seta"/></svg></a>
+              </div>
+              <div class="foto real"><img src="img/consultorio.jpg" alt="Médica em consulta com uma paciente" loading="lazy" style="object-position:center"></div>
+            </div>
+          </section>
+
+          <section class="bloco" data-b="res" id="resultados">
+            <div class="wrap">
+              <div class="cabeca"><span class="olho">Resultados</span><h2 data-t="res"></h2><p>Imagens ilustrativas. Os casos reais só são publicados com autorização escrita dos pacientes.</p></div>
+              <div class="resultados">
+                <a class="res" href="#resultados"><div class="res-fotos uma"><div class="foto real"><img src="img/medicina-estetica.jpg" alt="Imagem ilustrativa de tratamento facial" loading="lazy" style="object-position:40% center"></div><span class="res-vela">Ver resultado</span></div><p>Qualidade de pele <small>· bioestimuladores</small></p></a>
+                <a class="res" href="#resultados"><div class="res-fotos uma"><div class="foto real"><img src="img/medicina-dentaria.jpg" alt="Imagem ilustrativa de sorriso" loading="lazy" style="object-position:30% center"></div><span class="res-vela">Ver resultado</span></div><p>Sorriso natural <small>· facetas e branqueamento</small></p></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="bloco" data-b="tec" id="tecnologia">
+            <div class="wrap dupla inverte">
+              <div class="texto">
+                <span class="olho">Tecnologia</span>
+                <h2 data-t="tec"></h2>
+                <p>Equipamentos certificados, escolhidos pela segurança e pelo conforto durante o tratamento.</p>
+                <ul class="lista">
+                  <li><svg class="ic"><use href="#i-check"/></svg>HIFU de última geração</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>Criolipólise de placas</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>Laser fracionado CO2</li>
+                </ul>
+              </div>
+              <div class="foto real"><img src="img/estetica-avancada.jpg" alt="Tratamento de estética avançada" loading="lazy" style="object-position:center"></div>
+            </div>
+          </section>
+
+          <section class="bloco" data-b="esp" id="espaco">
+            <div class="wrap dupla">
+              <div class="texto">
+                <span class="olho">O espaço</span>
+                <h2 data-t="esp"></h2>
+                <p>Nas Avenidas Novas, perto do metro. Um ambiente discreto e acolhedor, pensado para o seu conforto.</p>
+                <div class="morada"><svg class="ic"><use href="#i-pino"/></svg><div><b>Avenidas Novas</b><span>Avenida Exemplo, 100, 1.º · 1050-000 Lisboa</span></div></div>
+                <a class="link-seta" href="#espaco">Ver direções no mapa <svg class="ic"><use href="#i-seta"/></svg></a>
+              </div>
+              <div class="foto real"><img src="img/capa.jpg" alt="Receção da Aurora Clínica" loading="lazy" style="object-position:80% center"></div>
+            </div>
+          </section>
+
+          <section class="bloco" data-b="eq" id="equipa">
+            <div class="wrap">
+              <div class="cabeca"><span class="olho">Equipa</span><h2 data-t="eq"></h2><p>Médicos e médicos dentistas inscritos nas respetivas Ordens.</p></div>
+              <div class="equipa">
+                <div class="pessoa"><div class="foto real"><img src="img/consultorio.jpg" alt="Diretora clínica" loading="lazy" style="object-position:62% 30%"></div><h3>Dra. Nome Apelido</h3><p>Diretora clínica · Cédula n.º 00000</p></div>
+                <div class="pessoa"><div class="foto real"><img src="img/medicina-estetica.jpg" alt="Médica de medicina estética" loading="lazy" style="object-position:82% 25%"></div><h3>Dra. Nome Apelido</h3><p>Medicina estética · Cédula n.º 00000</p></div>
+                <div class="pessoa"><div class="foto real"><img src="img/medicina-dentaria.jpg" alt="Médica dentista" loading="lazy" style="object-position:72% 25%"></div><h3>Dra. Nome Apelido</h3><p>Médica dentista · OMD n.º 00000</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bloco depo" data-b="dep" id="depoimentos">
+            <div class="wrap">
+              <div class="cabeca"><span class="nota-depo"><span class="estrelas">★★★★★</span> 4,9 no Google · 300 avaliações</span><h2 data-t="dep"></h2><p>Exemplos. No site da clínica entram só avaliações reais.</p></div>
+              <div class="depos" id="depos">
+                <blockquote class="dep"><span class="estrelas">★★★★★</span><p>Fui muito bem recebida. Explicaram tudo com calma e o resultado ficou natural, como eu queria.</p><footer>Paciente (exemplo) · Google</footer></blockquote>
+                <blockquote class="dep"><span class="estrelas">★★★★★</span><p>A avaliação foi detalhada e não me tentaram vender nada que eu não precisasse.</p><footer>Paciente (exemplo) · Google</footer></blockquote>
+                <blockquote class="dep"><span class="estrelas">★★★★★</span><p>Espaço muito agradável e equipa atenciosa. Marquei online e foi tudo rápido.</p><footer>Paciente (exemplo) · Google</footer></blockquote>
+                <blockquote class="dep"><span class="estrelas">★★★★★</span><p>Acompanharam-me depois do tratamento e responderam a todas as dúvidas.</p><footer>Paciente (exemplo) · Google</footer></blockquote>
+              </div>
+              <div class="depo-nav"><button type="button" data-depo="-1" aria-label="Anterior"><svg class="ic"><use href="#i-esq"/></svg></button><button type="button" data-depo="1" aria-label="Seguinte"><svg class="ic"><use href="#i-dir"/></svg></button></div>
+            </div>
+          </section>
+        </main>
+
+        <section class="cta" id="contactos">
+          <div class="wrap">
+            <h2 data-t="cta"></h2>
+            <p>Escolha o horário online, ou fale com a equipa antes de marcar.</p>
+            <div class="acoes" style="justify-content:center">
+              <button class="btn btn-marca" type="button" data-agendar>Agendar consulta</button>
+            </div>
+          </div>
+        </section>
+
+        <footer class="rodape">
+          <div class="wrap">
+            <div class="rodape-grelha">
+              <div><a class="logo" href="#topo"><b>Aurora</b><small>clínica</small></a><p style="margin-top:14px;opacity:.8">Avenida Exemplo, 100, 1.º<br>1050-000 Lisboa, Portugal</p></div>
+              <div><h4>Contactos</h4><ul><li>+351 910 000 000</li><li>+351 210 000 000</li><li>geral@auroraclinica.pt</li></ul></div>
+              <div><h4>Horário</h4><ul><li>Segunda a sexta: 10h às 20h</li><li>Sábado: 10h às 15h</li></ul></div>
+              <div><h4>Clínica</h4><ul><li><a href="#tratamentos">Tratamentos</a></li><li><a href="#filosofia">A Clínica</a></li><li><a href="#contactos">Contactos</a></li><li><a href="#topo">Livro de Reclamações</a></li></ul></div>
+            </div>
+            <div class="legal"><span>© 2026 Aurora Clínica · NIF 500 000 000 · ERS E000000 · <a href="https://b4bgrow.com" target="_blank" rel="noopener">Demonstração de site criada pela B4B Grow</a></span><span><a href="#topo">Termos de Uso</a> · <a href="#topo">Privacidade</a> · <a href="#topo">Cookies</a></span></div>
+          </div>
+        </footer>
+
+        <div class="barra-baixo" id="barra-baixo">
+          <button class="btn btn-marca" type="button" data-agendar>Marcar consulta</button>
+        </div>
+      </div>
+
+    <a class="whats-flutua" href="#contactos" aria-label="Falar no WhatsApp"><svg class="ic"><use href="#i-whats"/></svg></a>
+
+    <div class="janela" id="janela" role="dialog" aria-modal="true" aria-labelledby="janela-titulo" aria-hidden="true">
+      <div class="janela-caixa site" id="janela-caixa" data-v="1">
+        <button class="fechar" type="button" data-fechar aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
+        <div class="j-topo">
+          <span class="j-olho">Aurora Clínica · Avenidas Novas</span>
+          <h2 id="janela-titulo">Escolha como marcar</h2>
+          <p class="sub">Reserve já o seu horário online, ou fale primeiro com a nossa equipa.</p>
+        </div>
+        <div class="escolhas">
+          <a class="escolha principal" href="https://gestiohub.b4bgrow.com/agendar/zCd7F1iMKpuBfRJRfFfobAdrFr8PT6B3" target="_blank" rel="noopener" data-sair>
+            <span class="escolha-cima"><span class="j-ic"><svg class="ic"><use href="#i-agenda-ok"/></svg></span><span class="selo">Confirmação imediata</span></span>
+            <h3>Reservar online</h3>
+            <p>Veja os horários livres, escolha o profissional e fique logo com a consulta marcada.</p>
+            <span class="j-btn j-btn-marca">Escolher horário <svg class="ic"><use href="#i-seta"/></svg></span>
+          </a>
+          <a class="escolha verde" href="#contactos" data-fechar>
+            <span class="escolha-cima"><span class="j-ic"><svg class="ic"><use href="#i-whats"/></svg></span><span class="selo">Resposta no mesmo dia</span></span>
+            <h3>Conversar no WhatsApp</h3>
+            <p>Esclareça dúvidas sobre tratamentos e valores antes de decidir.</p>
+            <span class="j-btn j-btn-verde">Abrir conversa <svg class="ic"><use href="#i-seta"/></svg></span>
+          </a>
+        </div>
+        <div class="janela-rodape">
+          <span class="j-info"><span class="j-mini"><svg class="ic"><use href="#i-estrela"/></svg></span><span><b>4,9</b> <span class="estrelas">★★★★★</span><br><small>300 avaliações no Google</small></span></span>
+          <a class="j-info" href="#espaco" data-fechar><span class="j-mini"><svg class="ic"><use href="#i-pino"/></svg></span><span><b>Avenidas Novas</b><br><small>Avenida Exemplo, 100 · Ver no mapa</small></span></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+(function () {
+  var V = {
+    1: { nome: "Champanhe", resumo: "Areia e dourado, títulos em maiúsculas clássicas. <b>Capa:</b> foto do espaço em ecrã inteiro, com véu creme a partir da esquerda. <b>Cartões:</b> fotos altas, sem moldura. <b>Ordem:</b> tratamentos, clínica, resultados, tecnologia, espaço, equipa, avaliações.",
+      ordem: ["trat", "filo", "res", "tec", "esp", "eq", "dep"],
+      t: { olho: "Medicina estética · Estética avançada · Medicina dentária", h1: "A estética da sua <em>melhor versão</em>", sub: "Tratamentos personalizados, pensados para um resultado natural.", "trat-olho": "Áreas de tratamento", trat: "Tudo o que precisa, num só lugar", "trat-sub": "Três áreas com equipas próprias, e uma avaliação antes de qualquer tratamento.", "filo-olho": "A clínica", filo: "Realçar, sem transformar", res: "Resultados naturais, traços preservados", tec: "Precisão médica, tecnologia atual", esp: "Um espaço calmo no centro de Lisboa", eq: "A equipa clínica", dep: "O que dizem os nossos pacientes", cta: "Marque a sua avaliação" } }
+  };
+
+
+  // Traduções: espanhol de Espanha e inglês britânico, escritos como se fala numa clínica de cada país.
+  // A chave é o texto em português; o que não estiver aqui fica igual (nomes, moradas, números).
+  var TR = {
+    "medicina estética": ["medicina estética", "aesthetic medicine"],
+    "Principal": ["Principal", "Main"],
+    "Início": ["Inicio", "Home"],
+    "Tratamentos": ["Tratamientos", "Treatments"],
+    "Rosto": ["Rostro", "Face"],
+    "Toxina Botulínica": ["Toxina botulínica", "Anti-wrinkle Injections"],
+    "Harmonização Facial": ["Armonización facial", "Facial Harmonisation"],
+    "Preenchimento Labial": ["Relleno de labios", "Lip Fillers"],
+    "Ácido Hialurónico": ["Ácido hialurónico", "Dermal Fillers"],
+    "Rejuvenescimento": ["Rejuvenecimiento", "Skin Rejuvenation"],
+    "Corpo": ["Cuerpo", "Body"],
+    "Preenchimento de Glúteos": ["Relleno de glúteos", "Buttock Fillers"],
+    "Redução de Gordura": ["Reducción de grasa", "Fat Reduction"],
+    "Criolipólise": ["Criolipólisis", "Fat Freezing"],
+    "Drenagem Linfática": ["Drenaje linfático", "Lymphatic Drainage"],
+    "Cabelo": ["Cabello", "Hair"],
+    "Tratamento Capilar": ["Tratamiento capilar", "Hair Loss Treatment"],
+    "A Clínica": ["La clínica", "The Clinic"],
+    "Resultados": ["Resultados", "Results"],
+    "Contactos": ["Contacto", "Contact"],
+    "Idioma": ["Idioma", "Language"],
+    "Agendar consulta": ["Pedir cita", "Book a consultation"],
+    "Marcar consulta": ["Pedir cita", "Book now"],
+    "Abrir menu": ["Abrir menú", "Open menu"],
+    "Foto do espaço da clínica (receção). Sem foto: imagem criada para a clínica": ["Foto del espacio de la clínica (recepción). Sin foto: imagen creada para la clínica", "Photo of the clinic (reception). No photo: an image created for the clinic"],
+    "Conhecer tratamentos": ["Ver tratamientos", "Explore treatments"],
+    "4,9 em 5 no Google, 300 avaliações": ["4,9 sobre 5 en Google, 300 reseñas", "Rated 4.9 out of 5 on Google, 300 reviews"],
+    "300 avaliações no Google": ["300 reseñas en Google", "300 Google reviews"],
+    "Receção da clínica": ["Recepción de la clínica", "Clinic reception"],
+    "Sala de tratamento": ["Sala de tratamiento", "Treatment room"],
+    "Detalhe do espaço": ["Detalle del espacio", "Interior detail"],
+    "Foto: rosto": ["Foto: rostro", "Photo: face"],
+    "Foto: expressão": ["Foto: expresión", "Photo: expression"],
+    "Foto: pele": ["Foto: piel", "Photo: skin"],
+    "Foto: corpo": ["Foto: cuerpo", "Photo: body"],
+    "Equilíbrio dos traços com pequenos ajustes, sem exagero.": ["Equilibra tus rasgos con pequeños retoques, sin excesos.", "Subtle tweaks that bring balance to your features, never overdone."],
+    "Rugas de expressão mais suaves, mantendo a expressão.": ["Suaviza las arrugas de expresión sin perder naturalidad.", "Softens expression lines while keeping you looking like you."],
+    "Estímulo de colagénio para firmeza e qualidade da pele.": ["Estimula el colágeno para una piel más firme y de mejor calidad.", "Boosts collagen for firmer, healthier-looking skin."],
+    "Contorno Corporal": ["Contorno corporal", "Body Contouring"],
+    "Redução de gordura localizada, firmeza e tonificação.": ["Reduce la grasa localizada, reafirma y tonifica.", "Targets stubborn fat, firms and tones."],
+    "Ver tratamento": ["Ver tratamiento", "View treatment"],
+    "Ver todos os tratamentos": ["Ver todos los tratamientos", "View all treatments"],
+    "Cada plano começa por uma avaliação médica. Estudamos o rosto, a pele e o que o incomoda, e propomos só o que faz sentido para si.": ["Cada plan empieza con una valoración médica. Estudiamos tu rostro, tu piel y lo que te preocupa, y solo te proponemos lo que tiene sentido para ti.", "Every plan starts with a medical consultation. We look at your face, your skin and what bothers you, and only recommend what makes sense for you."],
+    "Trabalhamos com tempo e com protocolos ajustados a cada pessoa, para um resultado natural.": ["Trabajamos sin prisas y con protocolos adaptados a cada persona, para un resultado natural.", "We take our time and tailor every protocol to the person, for results that look natural."],
+    "Conhecer a clínica": ["Conoce la clínica", "About the clinic"],
+    "Foto do consultório": ["Foto de la consulta", "Photo of the consulting room"],
+    "Antes e depois": ["Antes y después", "Before & after"],
+    "Casos com autorização escrita dos pacientes.": ["Casos publicados con autorización por escrito de los pacientes.", "Shared with our patients' written consent."],
+    "Antes": ["Antes", "Before"],
+    "Depois": ["Después", "After"],
+    "Ver resultado": ["Ver resultado", "View result"],
+    "Harmonização facial natural": ["Armonización facial natural", "Natural facial harmonisation"],
+    "· 3 sessões": ["· 3 sesiones", "· 3 sessions"],
+    "Qualidade de pele": ["Calidad de la piel", "Skin quality"],
+    "· bioestimuladores": ["· bioestimuladores", "· biostimulators"],
+    "Tecnologia": ["Tecnología", "Technology"],
+    "Equipamentos certificados, escolhidos pela segurança e pelo conforto durante o tratamento.": ["Equipos certificados, elegidos por su seguridad y por la comodidad durante el tratamiento.", "Certified equipment, chosen for safety and for your comfort during treatment."],
+    "HIFU de última geração": ["HIFU de última generación", "Latest-generation HIFU"],
+    "Criolipólise de placas": ["Criolipólisis de placas", "Plate cryolipolysis"],
+    "Laser fracionado CO2": ["Láser CO2 fraccionado", "Fractional CO2 laser"],
+    "Foto do equipamento": ["Foto del equipo", "Photo of the equipment"],
+    "O espaço": ["El espacio", "The space"],
+    "Nas Avenidas Novas, perto do metro. Um ambiente discreto e acolhedor, pensado para o seu conforto.": ["En Avenidas Novas, cerca del metro. Un ambiente discreto y acogedor, pensado para que te sientas cómodo.", "In Avenidas Novas, close to the metro. A discreet, welcoming space designed with your comfort in mind."],
+    "Ver direções no mapa": ["Cómo llegar", "Get directions"],
+    "Foto da sala de espera": ["Foto de la sala de espera", "Photo of the waiting room"],
+    "Equipa": ["Equipo", "Team"],
+    "Médicos inscritos na Ordem, com formação em medicina estética.": ["Médicos colegiados, con formación en medicina estética.", "Registered doctors with specialist training in aesthetic medicine."],
+    "Foto da médica": ["Foto de la doctora", "Photo of the doctor"],
+    "Foto do médico": ["Foto del doctor", "Photo of the doctor"],
+    "Foto da enfermeira": ["Foto de la enfermera", "Photo of the nurse"],
+    "Dra. Nome Apelido": ["Dra. Nombre Apellido", "Dr Name Surname"],
+    "Dr. Nome Apelido": ["Dr. Nombre Apellido", "Dr Name Surname"],
+    "Enf. Nome Apelido": ["Enf. Nombre Apellido", "Nurse Name Surname"],
+    "Diretora clínica · Cédula n.º 00000": ["Directora médica · N.º de colegiada 00000", "Medical Director · Registration no. 00000"],
+    "Medicina estética · Cédula n.º 00000": ["Medicina estética · N.º de colegiado 00000", "Aesthetic Medicine · Registration no. 00000"],
+    "Enfermagem e cuidados de pele": ["Enfermería y cuidado de la piel", "Nursing and skincare"],
+    "4,9 no Google · 300 avaliações": ["4,9 en Google · 300 reseñas", "4.9 on Google · 300 reviews"],
+    "Exemplos. No site da clínica entram só avaliações reais.": ["Ejemplos. En la web de la clínica solo aparecen reseñas reales.", "Examples only. The clinic's website shows real reviews only."],
+    "Fui muito bem recebida. Explicaram tudo com calma e o resultado ficou natural, como eu queria.": ["Me atendieron genial. Me lo explicaron todo con calma y el resultado quedó natural, tal y como quería.", "I felt so well looked after. They explained everything calmly and the result looks natural, just as I wanted."],
+    "Paciente (exemplo) · Google": ["Paciente (ejemplo) · Google", "Patient (example) · Google"],
+    "A avaliação foi detalhada e não me tentaram vender nada que eu não precisasse.": ["La valoración fue muy completa y no intentaron venderme nada que no necesitara.", "The consultation was really thorough and nobody tried to sell me anything I didn't need."],
+    "Espaço muito agradável e equipa atenciosa. Marquei online e foi tudo rápido.": ["Un espacio muy agradable y un equipo muy atento. Pedí cita online y todo fue rapidísimo.", "Lovely clinic and a really attentive team. I booked online and it was all quick and easy."],
+    "Acompanharam-me depois do tratamento e responderam a todas as dúvidas.": ["Me hicieron seguimiento después del tratamiento y me resolvieron todas las dudas.", "They followed up after my treatment and answered all my questions."],
+    "Anterior": ["Anterior", "Previous"],
+    "Seguinte": ["Siguiente", "Next"],
+    "Escolha o horário online, ou fale com a equipa antes de marcar.": ["Elige tu hora online o habla con el equipo antes de reservar.", "Choose a time online, or talk to the team before you book."],
+    "1050-000 Lisboa, Portugal": ["1050-000 Lisboa, Portugal", "1050-000 Lisbon, Portugal"],
+    "Avenida Exemplo, 100, 1.º · 1050-000 Lisboa": ["Avenida Exemplo, 100, 1.º · 1050-000 Lisboa", "Avenida Exemplo, 100, 1.º · 1050-000 Lisbon"],
+    "Horário": ["Horario", "Opening hours"],
+    "Segunda a sexta: 10h às 20h": ["Lunes a viernes: de 10:00 a 20:00", "Monday to Friday: 10am to 8pm"],
+    "Sábado: 10h às 15h": ["Sábado: de 10:00 a 15:00", "Saturday: 10am to 3pm"],
+    "Clínica": ["Clínica", "Clinic"],
+    "Livro de Reclamações": ["Libro de Reclamaciones", "Complaints Book"],
+    "© 2026 Aurora Clínica · NIF 500 000 000 · ERS E000000": ["© 2026 Aurora Clínica · NIF 500 000 000 · ERS E000000", "© 2026 Aurora Clínica · Tax no. (NIF) 500 000 000 · ERS E000000"],
+    "Termos de Uso": ["Aviso legal", "Terms of Use"],
+    "Privacidade": ["Privacidad", "Privacy"],
+    "Cookies": ["Cookies", "Cookies"],
+    "Falar no WhatsApp": ["Escríbenos por WhatsApp", "Chat on WhatsApp"],
+    "Fechar": ["Cerrar", "Close"],
+    "Aurora Clínica · Avenidas Novas": ["Aurora Clínica · Avenidas Novas", "Aurora Clínica · Avenidas Novas"],
+    "Escolha como marcar": ["Elige cómo pedir cita", "Choose how to book"],
+    "Reserve já o seu horário online, ou fale primeiro com a nossa equipa.": ["Reserva tu hora online ahora mismo, o habla antes con nuestro equipo.", "Book your slot online now, or have a chat with our team first."],
+    "Confirmação imediata": ["Confirmación al momento", "Instant confirmation"],
+    "Reservar online": ["Reservar online", "Book online"],
+    "Veja os horários livres, escolha o profissional e fique logo com a consulta marcada.": ["Consulta las horas libres, elige al profesional y deja tu cita reservada en el momento.", "See available times, choose your practitioner and have your appointment confirmed straight away."],
+    "Escolher horário": ["Elegir hora", "Choose a time"],
+    "Resposta no mesmo dia": ["Te respondemos el mismo día", "Same-day reply"],
+    "Conversar no WhatsApp": ["Escríbenos por WhatsApp", "Chat on WhatsApp"],
+    "Esclareça dúvidas sobre tratamentos e valores antes de decidir.": ["Resuelve tus dudas sobre tratamientos y precios antes de decidirte.", "Ask about treatments and prices before you decide."],
+    "Abrir conversa": ["Abrir chat", "Start chatting"],
+    "Avenida Exemplo, 100 · Ver no mapa": ["Avenida Exemplo, 100 · Ver en el mapa", "Avenida Exemplo, 100 · View on map"],
+    "Como prefere agendar?": ["¿Cómo prefieres pedir cita?", "How would you like to book?"],
+    "Confirmação imediata online, ou uma conversa com a equipa.": ["Confirmación al momento online, o una conversación con el equipo.", "Instant confirmation online, or a chat with the team."],
+    "Mais rápido · 24/7": ["Lo más rápido · 24/7", "Fastest · 24/7"],
+    "Agendamento online": ["Cita online", "Book online"],
+    "Veja as vagas em tempo real, escolha o médico e garanta o seu horário.": ["Consulta la disponibilidad en tiempo real, elige al médico y reserva tu hora.", "See live availability, choose your doctor and secure your slot."],
+    "Ver vagas": ["Ver disponibilidad", "See availability"],
+    "Dúvidas e planos": ["Dudas y presupuestos", "Questions and prices"],
+    "Tire dúvidas sobre tratamentos e valores com a nossa equipa.": ["Resuelve tus dudas sobre tratamientos y precios con nuestro equipo.", "Ask our team about treatments and prices."],
+    "Iniciar conversa": ["Empezar conversación", "Start a chat"],
+    "4,9 no Google (300 avaliações)": ["4,9 en Google (300 reseñas)", "4.9 on Google (300 reviews)"],
+    "Medicina Estética": ["Medicina estética", "Aesthetic Medicine"],
+    "Rugas e expressão": ["Arrugas y expresión", "Lines and wrinkles"],
+    "Preenchimentos": ["Rellenos", "Fillers"],
+    "Qualidade da pele": ["Calidad de la piel", "Skin quality"],
+    "Corpo": ["Cuerpo", "Body"],
+    "Estética Avançada": ["Estética avanzada", "Advanced Aesthetics"],
+    "Tecnologias faciais": ["Tecnologías faciales", "Facial technology"],
+    "Cuidados de pele": ["Cuidado de la piel", "Skin treatments"],
+    "Depilação": ["Depilación", "Hair removal"],
+    "Medicina Dentária": ["Odontología", "Dentistry"],
+    "Implantologia": ["Implantología", "Dental implants"],
+    "Ortodontia": ["Ortodoncia", "Orthodontics"],
+    "Estética dentária": ["Estética dental", "Cosmetic dentistry"],
+    "Dentisteria e prevenção": ["Odontología general", "General dentistry"],
+    "Endodontia e gengivas": ["Endodoncia y encías", "Root canals and gums"],
+    "Toxina botulínica": ["Toxina botulínica", "Anti-wrinkle injections"],
+    "Toxina de longa duração": ["Toxina de larga duración", "Long-lasting anti-wrinkle injections"],
+    "Ácido hialurónico": ["Ácido hialurónico", "Dermal fillers"],
+    "Preenchimento labial": ["Relleno de labios", "Lip fillers"],
+    "Rinomodelação": ["Rinomodelación", "Non-surgical nose job"],
+    "Harmonização facial": ["Armonización facial", "Facial harmonisation"],
+    "Bioestimuladores de colagénio": ["Bioestimuladores de colágeno", "Collagen stimulators"],
+    "Skinbooster": ["Skinbooster", "Skin boosters"],
+    "PDRN": ["PDRN", "PDRN (polynucleotides)"],
+    "Mesoterapia facial": ["Mesoterapia facial", "Facial mesotherapy"],
+    "Lipólise enzimática": ["Lipólisis enzimática", "Fat-dissolving injections"],
+    "Preenchimento de glúteos": ["Relleno de glúteos", "Buttock fillers"],
+    "Tratamentos médicos injetáveis para o rosto e o corpo, feitos com naturalidade.": ["Tratamientos médicos inyectables para rostro y cuerpo, con resultados naturales.", "Medical injectable treatments for face and body, with natural-looking results."],
+    "Radiofrequência microagulhada": ["Radiofrecuencia con microagujas", "RF microneedling"],
+    "Laser CO2 fracionado": ["Láser CO2 fraccionado", "Fractional CO2 laser"],
+    "Luz pulsada (IPL)": ["Luz pulsada (IPL)", "IPL photofacial"],
+    "Limpeza de pele profunda": ["Limpieza facial profunda", "Deep cleansing facial"],
+    "Peeling químico": ["Peeling químico", "Chemical peel"],
+    "Hydrafacial": ["Hydrafacial", "HydraFacial"],
+    "Microagulhamento": ["Microneedling", "Microneedling"],
+    "Criolipólise": ["Criolipólisis", "Fat freezing"],
+    "Radiofrequência corporal": ["Radiofrecuencia corporal", "Body radiofrequency"],
+    "Drenagem linfática": ["Drenaje linfático", "Lymphatic drainage"],
+    "Pressoterapia": ["Presoterapia", "Pressotherapy"],
+    "Depilação a laser": ["Depilación láser", "Laser hair removal"],
+    "Tecnologia e protocolos de cabine para a pele, o rosto e o corpo.": ["Tecnología y protocolos de cabina para piel, rostro y cuerpo.", "Technology-led treatments for skin, face and body."],
+    "Implantes dentários": ["Implantes dentales", "Single implants"],
+    "Carga imediata": ["Carga inmediata", "Same-day teeth"],
+    "Enxerto ósseo": ["Injerto óseo", "Bone grafting"],
+    "Alinhadores invisíveis": ["Alineadores invisibles", "Clear aligners"],
+    "Aparelho fixo": ["Brackets", "Fixed braces"],
+    "Branqueamento": ["Blanqueamiento", "Teeth whitening"],
+    "Facetas": ["Carillas", "Veneers"],
+    "Harmonização do sorriso": ["Diseño de sonrisa", "Smile makeover"],
+    "Consulta de avaliação": ["Primera visita", "Check-up"],
+    "Higiene oral": ["Limpieza dental", "Hygienist appointment"],
+    "Restaurações": ["Empastes", "Fillings"],
+    "Desvitalização": ["Endodoncia", "Root canal treatment"],
+    "Tratamento de gengivas": ["Tratamiento de encías", "Gum treatment"],
+    "Saúde e estética do sorriso, da prevenção à reabilitação com implantes.": ["Salud y estética de la sonrisa, de la prevención a la rehabilitación con implantes.", "Healthy, beautiful smiles, from check-ups to dental implants."],
+    "Sorriso natural": ["Sonrisa natural", "Natural smile"],
+    "· facetas e branqueamento": ["· carillas y blanqueamiento", "· veneers and whitening"],
+    "Imagens ilustrativas. Os casos reais só são publicados com autorização escrita dos pacientes.": ["Imágenes ilustrativas. Los casos reales solo se publican con autorización por escrito de los pacientes.", "Illustrative images. Real cases are only shared with patients' written consent."],
+    "Imagem ilustrativa de tratamento facial": ["Imagen ilustrativa de tratamiento facial", "Illustrative image of a facial treatment"],
+    "Imagem ilustrativa de sorriso": ["Imagen ilustrativa de una sonrisa", "Illustrative image of a smile"],
+    "Diretora clínica": ["Directora médica", "Medical Director"],
+    "Médica de medicina estética": ["Médica de medicina estética", "Aesthetic doctor"],
+    "Médica dentista": ["Odontóloga", "Dentist"],
+    "Médica dentista · OMD n.º 00000": ["Odontóloga · N.º de colegiada 00000", "Dentist · Registration no. 00000"],
+    "Médicos e médicos dentistas inscritos nas respetivas Ordens.": ["Médicos y odontólogos colegiados.", "Registered doctors and dentists."],
+    "Cada plano começa por uma avaliação. Estudamos o rosto, a pele e o sorriso, ouvimos o que o incomoda e propomos só o que faz sentido para si.": ["Cada plan empieza con una valoración. Estudiamos tu rostro, tu piel y tu sonrisa, escuchamos lo que te preocupa y solo te proponemos lo que tiene sentido para ti.", "Every plan starts with an assessment. We look at your face, skin and smile, listen to what bothers you, and only recommend what makes sense for you."],
+    "Médica em consulta com uma paciente": ["Médica en consulta con una paciente", "Doctor in a consultation with a patient"],
+    "Tratamento de estética avançada": ["Tratamiento de estética avanzada", "Advanced aesthetics treatment"],
+    "Receção da Aurora Clínica": ["Recepción de Aurora Clínica", "Aurora Clínica reception"],
+    "Médica a avaliar o rosto de uma paciente": ["Médica valorando el rostro de una paciente", "Doctor assessing a patient's face"],
+    "Tratamento facial com radiofrequência": ["Tratamiento facial con radiofrecuencia", "Radiofrequency facial treatment"],
+    "Médica dentista a explicar um tratamento à paciente": ["Odontóloga explicando un tratamiento a la paciente", "Dentist explaining a treatment to a patient"],
+    "clínica": ["clínica", "clinic"],
+    "Marcar avaliação": ["Pedir valoración", "Book an assessment"],
+    "Demonstração de site criada pela B4B Grow": ["Demostración de web creada por B4B Grow", "Website demo created by B4B Grow"]
+  };
+  var TT = {
+    ES: { olho: "Medicina estética · Estética avanzada · Odontología", h1: "La estética de tu <em>mejor versión</em>", sub: "Tratamientos personalizados, pensados para un resultado natural.", "trat-olho": "Áreas de tratamiento", trat: "Todo lo que necesitas, en un solo lugar", "trat-sub": "Tres áreas con equipos propios, y una valoración antes de cualquier tratamiento.", "filo-olho": "La clínica", filo: "Realzar, sin transformar", res: "Resultados naturales, tus rasgos de siempre", tec: "Precisión médica, tecnología de hoy", esp: "Un espacio tranquilo en pleno centro de Lisboa", eq: "El equipo clínico", dep: "Lo que dicen nuestros pacientes", cta: "Pide tu primera valoración" },
+    EN: { olho: "Aesthetic medicine · Advanced aesthetics · Dentistry", h1: "Aesthetics for the <em>best version</em> of you", sub: "Personalised treatments, designed for natural-looking results.", "trat-olho": "Treatment areas", trat: "Everything you need, under one roof", "trat-sub": "Three areas, each with its own specialist team, and an assessment before any treatment.", "filo-olho": "The clinic", filo: "Enhance, never transform", res: "Natural results, your features preserved", tec: "Medical precision, the latest technology", esp: "A calm space in the heart of Lisbon", eq: "Our clinical team", dep: "What our patients say", cta: "Book your consultation" }
+  };
+  var site = document.getElementById("site");
+  var caixa = document.getElementById("janela-caixa");
+
+  function escolher(n) {
+    var v = V[n]; if (!v) return;
+    site.dataset.v = n; caixa.dataset.v = n;
+    Object.keys(v.t).forEach(function (k) {
+      document.querySelectorAll('[data-t="' + k + '"]').forEach(function (el) { el.innerHTML = v.t[k]; });
+    });
+    v.ordem.forEach(function (b, i) {
+      var s = document.querySelector('[data-b="' + b + '"]');
+      s.style.order = i;
+      if (b !== "dep") s.classList.toggle("alt", i % 2 === 1);
+    });
+    document.querySelectorAll("[data-escolher]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.escolher === String(n))); });
+
+  }
+  document.querySelectorAll("[data-escolher]").forEach(function (b) { b.addEventListener("click", function () { escolher(b.dataset.escolher); }); });
+
+  // Links internos: fecha o menu do telemóvel e rola até ao bloco
+  site.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    e.preventDefault();
+    var alvo = document.getElementById(a.getAttribute("href").slice(1));
+    fecharPainel();
+    if (alvo) window.scrollTo({ top: alvo.getBoundingClientRect().top + window.scrollY - 76, behavior: "smooth" });
+  });
+
+  // Menu do telemóvel
+  var burger = document.getElementById("burger"), painel = document.getElementById("painel");
+  function fecharPainel() { painel.classList.remove("aberto"); burger.setAttribute("aria-expanded", "false"); }
+  burger.addEventListener("click", function () {
+    var abrir = !painel.classList.contains("aberto");
+    painel.classList.toggle("aberto", abrir); burger.setAttribute("aria-expanded", String(abrir));
+  });
+
+  // Janela de agendar
+  var janela = document.getElementById("janela");
+  function abrir() { janela.classList.add("aberta"); janela.setAttribute("aria-hidden", "false"); fecharPainel(); janela.querySelector(".fechar").focus(); }
+  function fechar() { janela.classList.remove("aberta"); janela.setAttribute("aria-hidden", "true"); }
+  document.querySelectorAll("[data-agendar]").forEach(function (b) { b.addEventListener("click", abrir); });
+  janela.addEventListener("click", function (e) {
+    if (e.target.closest("[data-sair]")) { fechar(); return; }
+    if (e.target === janela || e.target.closest("[data-fechar]")) { e.preventDefault(); fechar(); }
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") fechar(); });
+
+  // Barra de baixo: só depois de passar a capa
+  var barra = document.getElementById("barra-baixo"), capa = document.getElementById("topo");
+  window.addEventListener("scroll", function () { barra.classList.toggle("ver", window.scrollY > capa.offsetHeight - 80); }, { passive: true });
+
+  // Carrossel de avaliações
+  var depos = document.getElementById("depos");
+  document.querySelectorAll("[data-depo]").forEach(function (b) {
+    b.addEventListener("click", function () { var c = depos.querySelector(".dep"); depos.scrollBy({ left: Number(b.dataset.depo) * (c.offsetWidth + 20), behavior: "smooth" }); });
+  });
+
+  escolher("1");
+
+  // Aplica o idioma a todos os textos do site, da janela de agendar e do botão flutuante
+  var raizes = [site, document.getElementById("janela"), document.querySelector(".whats-flutua")];
+  var originais = new WeakMap();
+  var LANG_HTML = { PT: "pt-PT", ES: "es-ES", EN: "en-GB" };
+  function traduzir(pt, lang) { if (lang === "PT") return pt; var e = TR[pt]; return e ? e[lang === "ES" ? 0 : 1] : pt; }
+  function aplicarIdioma(lang) {
+    raizes.forEach(function (raiz) {
+      var w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT), n;
+      while ((n = w.nextNode())) {
+        if (n.parentElement.closest("[data-t]")) continue;
+        if (!originais.has(n)) originais.set(n, n.nodeValue);
+        var o = originais.get(n), t = o.trim(); if (!t) continue;
+        n.nodeValue = o.replace(t, traduzir(t, lang));
+      }
+      raiz.querySelectorAll("[aria-label],[data-legenda]").forEach(function (el) {
+        if (el.id === "idioma-btn") return;
+        ["aria-label", "data-legenda"].forEach(function (a) {
+          if (!el.hasAttribute(a)) return;
+          var k = "pt-" + a; if (!el.dataset[k.replace(/-(\w)/g, function (_, c) { return c.toUpperCase(); })]) el.setAttribute("data-" + k, el.getAttribute(a));
+          el.setAttribute(a, traduzir(el.getAttribute("data-" + k), lang));
+        });
+      });
+    });
+    var textos = lang === "PT" ? V[1].t : TT[lang];
+    Object.keys(textos).forEach(function (k) { document.querySelectorAll('[data-t="' + k + '"]').forEach(function (el) { el.innerHTML = textos[k]; }); });
+    document.documentElement.lang = LANG_HTML[lang];
+  }
+
+  // Idioma: PT por omissão; ES e EN escolhem-se na lista
+  var idBtn = document.getElementById("idioma-btn"), idLista = document.getElementById("idioma-lista"), idAtual = document.getElementById("idioma-atual");
+  var nomes = { PT: "Português", ES: "Español", EN: "English" };
+  function listaIdioma(abrir) { idLista.hidden = !abrir; idBtn.setAttribute("aria-expanded", String(abrir)); }
+  idBtn.addEventListener("click", function (e) { e.stopPropagation(); listaIdioma(idLista.hidden); });
+  idLista.querySelectorAll("li").forEach(function (li) {
+    function escolherIdioma() {
+      idLista.querySelectorAll("li").forEach(function (x) { x.setAttribute("aria-selected", String(x === li)); });
+      idAtual.textContent = li.dataset.lang; idBtn.setAttribute("aria-label", (li.dataset.lang === "EN" ? "Language: " : "Idioma: ") + nomes[li.dataset.lang]);
+      aplicarIdioma(li.dataset.lang);
+      listaIdioma(false); idBtn.focus();
+    }
+    li.addEventListener("click", escolherIdioma);
+    li.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolherIdioma(); } });
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest("#idioma")) listaIdioma(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") listaIdioma(false); });
+})();
+</script>
+</body>
+</html>
